@@ -23,6 +23,11 @@ Enemy::Enemy(int hp, int point, float radius) : health(hp), point(point), radius
 	shape.setPosition(position);
 }
 
+Enemy::Enemy(const Enemy& other): health(health), point(point), radius(radius), position(position)
+{
+	shape = other.shape;
+}
+
 Enemy::~Enemy() {}
 
 Enemy* Enemy::create_enemy(int hp, int point, float radius)

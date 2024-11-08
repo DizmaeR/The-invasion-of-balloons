@@ -23,6 +23,8 @@ MainMenuScene::MainMenuScene(ManagerScene& managerScene): managerScene(managerSc
 	shapeName.setRadius(150);
 	shapeName.setPosition(350, 30);
 	shapeName.setFillColor(sf::Color::Red);
+
+	managerScene.savedEnemies.clear();
 }
 void MainMenuScene::draw(sf::RenderWindow& window) // Отрисовка главного меню
 {
@@ -54,7 +56,7 @@ void MainMenuScene::update(sf::RenderWindow& window) // Логика главного меню
 	{
 		if (playSelection)
 		{
-			managerScene.setScene(new AimScene(managerScene));
+			managerScene.setScene(TypeScene::AimScene);
 		}
 		else if (exitSelection)
 			window.close();
@@ -64,7 +66,6 @@ void MainMenuScene::handleEvent( sf::Event& event, sf::RenderWindow& window) // 
 {
 	if (event.type == sf::Event::KeyPressed)
 	{
-		std::cout << "M" << std::endl;
 		if (event.key.code == sf::Keyboard::Up)
 		{
 			std::cout << "Up" << std::endl;
@@ -81,16 +82,12 @@ void MainMenuScene::handleEvent( sf::Event& event, sf::RenderWindow& window) // 
 			exitButton.setFillColor(sf::Color::Red);
 			playButton.setFillColor(sf::Color::White);
 		}
-		else if (event.key.code == sf::Keyboard::Right)
-		{
-			std::cout << "R" << std::endl;
-		}
 	}
 	else if (event.key.code == sf::Keyboard::Enter)
 	{
 		if (playSelection)
 		{
-			managerScene.setScene(new AimScene(managerScene));
+			managerScene.setScene(TypeScene::AimScene);
 		}
 		else if (exitSelection)
 			window.close();

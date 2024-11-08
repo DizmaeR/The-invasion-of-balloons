@@ -136,19 +136,24 @@
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="FirstEngine.cpp" />
     <ClCompile Include="AimScene.cpp" />
+    <ClCompile Include="GameOverScene.cpp" />
     <ClCompile Include="MainMenuScene.cpp" />
     <ClCompile Include="ManagerScene.cpp" />
+    <ClCompile Include="PauseScene.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Scene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="AimScene.h" />
+    <ClInclude Include="GameOverScene.h" />
     <ClInclude Include="GameStatus.h" />
     <ClInclude Include="MainMenuScene.h" />
     <ClInclude Include="ManagerScene.h" />
+    <ClInclude Include="PauseScene.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Scene.h" />
+    <ClInclude Include="TypeScene.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

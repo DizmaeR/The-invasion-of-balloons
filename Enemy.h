@@ -6,6 +6,7 @@ class Enemy
 public:
 	Enemy(int hp, int point, float radius);
 
+	Enemy(const Enemy& other); //копирующий конструктор
 	int get_health();
 	bool is_alive() const;
 	void take_damage(int damage);

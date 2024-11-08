@@ -5,13 +5,16 @@ class Player
 {
 public:
 	Player();
-	int get_damage();
-	int get_points();
-	void take_points( int enemy_points);
-	//int get_count_enemy();
+	int get_damage() const;
+	int get_points() const;
+	void take_points(int enemy_points);
+	void take_health(int savedHp);
+	int get_health() const;
+	void missed_click();
 private:
+	
 	int damage = 1;
 	int points = 0;
-	//int count_enemy = 0;
+	int health = 4;
 };
 
